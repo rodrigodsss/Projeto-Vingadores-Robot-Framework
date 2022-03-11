@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.7 on win32)" generated="20220207 20:11:37.202" rpa="false" schemaversion="2">
+<suite id="s1" name="Checkbox" source="C:\qaninja\robot\hello\web\tests\checkbox.robot">
+<test id="s1-t1" name="Marcando opção com Id">
+<kw name="Nova sessão" library="base" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220207 20:11:37.756" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com/'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220207 20:11:42.162" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20220207 20:11:42.161" endtime="20220207 20:11:42.162"/>
+</kw>
+<msg timestamp="20220207 20:11:42.176" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 94
+Current browser version is 98.0.4758.82 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0055BDE3+2473443]
+	Ordinal0 [0x004F6661+2057825]
+	Ordinal0 [0x00402438+1057848]
+	Ordinal0 [0x0042054A+1181002]
+	Ordinal0 [0x0041C435+1164341]
+	Ordinal0 [0x00419CAF+1154223]
+	Ordinal0 [0x00449ADF+1350367]
+	Ordinal0 [0x0044974A+1349450]
+	Ordinal0 [0x004455AB+1332651]
+	Ordinal0 [0x00422104+1188100]
+	Ordinal0 [0x00422F59+1191769]
+	GetHandleVerifier [0x006E2266+1549718]
+	GetHandleVerifier [0x0078D4A7+2250711]
+	GetHandleVerifier [0x005E718B+521403]
+	GetHandleVerifier [0x005E6229+517465]
+	Ordinal0 [0x004FB79D+2078621]
+	Ordinal0 [0x004FFB58+2095960]
+	Ordinal0 [0x004FFC92+2096274]
+	Ordinal0 [0x00509541+2135361]
+	BaseThreadInitThunk [0x77D4FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77E97A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77E97A6E+238]
+</msg>
+<status status="FAIL" starttime="20220207 20:11:37.756" endtime="20220207 20:11:42.176"/>
+</kw>
+<status status="FAIL" starttime="20220207 20:11:37.755" endtime="20220207 20:11:42.179"/>
+</kw>
+<kw name="Encerra sessão" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220207 20:11:42.181" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20220207 20:11:42.181" endtime="20220207 20:11:42.181"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220207 20:11:42.182" endtime="20220207 20:11:42.182"/>
+</kw>
+<status status="PASS" starttime="20220207 20:11:42.180" endtime="20220207 20:11:42.182"/>
+</kw>
+<status status="FAIL" starttime="20220207 20:11:37.754" endtime="20220207 20:11:42.183">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 94
+Current browser version is 98.0.4758.82 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0055BDE3+2473443]
+	Ordinal0 [0x004F6661+2057825]
+	Ordinal0 [0x00402438+1057848]
+	Ordinal0 [0x0042054A+1181002]
+	Ordinal0 [0x0041C435+1164341]
+	Ordinal0 [0x00419CAF+1154223]
+	Ordinal0 [0x00449ADF+1350367]
+	Ordinal0 [0x0044974A+1349450]
+	Ordinal0 [0x004455AB+1332651]
+	Ordinal0 [0x00422104+1188100]
+	Ordinal0 [0x00422F59+1191769]
+	GetHandleVerifier [0x006E2266+1549718]
+	GetHandleVerifier [0x0078D4A7+2250711]
+	GetHandleVerifier [0x005E718B+521403]
+	GetHandleVerifier [0x005E6229+517465]
+	Ordinal0 [0x004FB79D+2078621]
+	Ordinal0 [0x004FFB58+2095960]
+	Ordinal0 [0x004FFC92+2096274]
+	Ordinal0 [0x00509541+2135361]
+	BaseThreadInitThunk [0x77D4FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77E97A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77E97A6E+238]
+</status>
+</test>
+<test id="s1-t2" name="Marcando opção com CSS">
+<kw name="Nova sessão" library="base" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220207 20:11:42.200" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com/'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220207 20:11:46.424" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20220207 20:11:46.424" endtime="20220207 20:11:46.424"/>
+</kw>
+<msg timestamp="20220207 20:11:46.428" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 94
+Current browser version is 98.0.4758.82 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0055BDE3+2473443]
+	Ordinal0 [0x004F6661+2057825]
+	Ordinal0 [0x00402438+1057848]
+	Ordinal0 [0x0042054A+1181002]
+	Ordinal0 [0x0041C435+1164341]
+	Ordinal0 [0x00419CAF+1154223]
+	Ordinal0 [0x00449ADF+1350367]
+	Ordinal0 [0x0044974A+1349450]
+	Ordinal0 [0x004455AB+1332651]
+	Ordinal0 [0x00422104+1188100]
+	Ordinal0 [0x00422F59+1191769]
+	GetHandleVerifier [0x006E2266+1549718]
+	GetHandleVerifier [0x0078D4A7+2250711]
+	GetHandleVerifier [0x005E718B+521403]
+	GetHandleVerifier [0x005E6229+517465]
+	Ordinal0 [0x004FB79D+2078621]
+	Ordinal0 [0x004FFB58+2095960]
+	Ordinal0 [0x004FFC92+2096274]
+	Ordinal0 [0x00509541+2135361]
+	BaseThreadInitThunk [0x77D4FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77E97A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77E97A6E+238]
+</msg>
+<status status="FAIL" starttime="20220207 20:11:42.199" endtime="20220207 20:11:46.428"/>
+</kw>
+<status status="FAIL" starttime="20220207 20:11:42.198" endtime="20220207 20:11:46.430"/>
+</kw>
+<kw name="Encerra sessão" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220207 20:11:46.433" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20220207 20:11:46.432" endtime="20220207 20:11:46.433"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220207 20:11:46.433" endtime="20220207 20:11:46.434"/>
+</kw>
+<status status="PASS" starttime="20220207 20:11:46.431" endtime="20220207 20:11:46.434"/>
+</kw>
+<status status="FAIL" starttime="20220207 20:11:42.197" endtime="20220207 20:11:46.435">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 94
+Current browser version is 98.0.4758.82 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0055BDE3+2473443]
+	Ordinal0 [0x004F6661+2057825]
+	Ordinal0 [0x00402438+1057848]
+	Ordinal0 [0x0042054A+1181002]
+	Ordinal0 [0x0041C435+1164341]
+	Ordinal0 [0x00419CAF+1154223]
+	Ordinal0 [0x00449ADF+1350367]
+	Ordinal0 [0x0044974A+1349450]
+	Ordinal0 [0x004455AB+1332651]
+	Ordinal0 [0x00422104+1188100]
+	Ordinal0 [0x00422F59+1191769]
+	GetHandleVerifier [0x006E2266+1549718]
+	GetHandleVerifier [0x0078D4A7+2250711]
+	GetHandleVerifier [0x005E718B+521403]
+	GetHandleVerifier [0x005E6229+517465]
+	Ordinal0 [0x004FB79D+2078621]
+	Ordinal0 [0x004FFB58+2095960]
+	Ordinal0 [0x004FFC92+2096274]
+	Ordinal0 [0x00509541+2135361]
+	BaseThreadInitThunk [0x77D4FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77E97A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77E97A6E+238]
+</status>
+</test>
+<test id="s1-t3" name="Marcando opção com Xpath">
+<kw name="Nova sessão" library="base" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220207 20:11:46.455" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com/'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220207 20:11:50.822" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20220207 20:11:50.821" endtime="20220207 20:11:50.822"/>
+</kw>
+<msg timestamp="20220207 20:11:50.826" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 94
+Current browser version is 98.0.4758.82 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0055BDE3+2473443]
+	Ordinal0 [0x004F6661+2057825]
+	Ordinal0 [0x00402438+1057848]
+	Ordinal0 [0x0042054A+1181002]
+	Ordinal0 [0x0041C435+1164341]
+	Ordinal0 [0x00419CAF+1154223]
+	Ordinal0 [0x00449ADF+1350367]
+	Ordinal0 [0x0044974A+1349450]
+	Ordinal0 [0x004455AB+1332651]
+	Ordinal0 [0x00422104+1188100]
+	Ordinal0 [0x00422F59+1191769]
+	GetHandleVerifier [0x006E2266+1549718]
+	GetHandleVerifier [0x0078D4A7+2250711]
+	GetHandleVerifier [0x005E718B+521403]
+	GetHandleVerifier [0x005E6229+517465]
+	Ordinal0 [0x004FB79D+2078621]
+	Ordinal0 [0x004FFB58+2095960]
+	Ordinal0 [0x004FFC92+2096274]
+	Ordinal0 [0x00509541+2135361]
+	BaseThreadInitThunk [0x77D4FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77E97A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77E97A6E+238]
+</msg>
+<status status="FAIL" starttime="20220207 20:11:46.454" endtime="20220207 20:11:50.826"/>
+</kw>
+<status status="FAIL" starttime="20220207 20:11:46.453" endtime="20220207 20:11:50.828"/>
+</kw>
+<kw name="Encerra sessão" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220207 20:11:50.830" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20220207 20:11:50.830" endtime="20220207 20:11:50.831"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220207 20:11:50.831" endtime="20220207 20:11:50.831"/>
+</kw>
+<status status="PASS" starttime="20220207 20:11:50.829" endtime="20220207 20:11:50.832"/>
+</kw>
+<tag>ironman</tag>
+<status status="FAIL" starttime="20220207 20:11:46.451" endtime="20220207 20:11:50.832">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 94
+Current browser version is 98.0.4758.82 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0055BDE3+2473443]
+	Ordinal0 [0x004F6661+2057825]
+	Ordinal0 [0x00402438+1057848]
+	Ordinal0 [0x0042054A+1181002]
+	Ordinal0 [0x0041C435+1164341]
+	Ordinal0 [0x00419CAF+1154223]
+	Ordinal0 [0x00449ADF+1350367]
+	Ordinal0 [0x0044974A+1349450]
+	Ordinal0 [0x004455AB+1332651]
+	Ordinal0 [0x00422104+1188100]
+	Ordinal0 [0x00422F59+1191769]
+	GetHandleVerifier [0x006E2266+1549718]
+	GetHandleVerifier [0x0078D4A7+2250711]
+	GetHandleVerifier [0x005E718B+521403]
+	GetHandleVerifier [0x005E6229+517465]
+	Ordinal0 [0x004FB79D+2078621]
+	Ordinal0 [0x004FFB58+2095960]
+	Ordinal0 [0x004FFC92+2096274]
+	Ordinal0 [0x00509541+2135361]
+	BaseThreadInitThunk [0x77D4FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77E97A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77E97A6E+238]
+</status>
+</test>
+<status status="FAIL" starttime="20220207 20:11:37.206" endtime="20220207 20:11:50.850"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">ironman</stat>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="Checkbox">Checkbox</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

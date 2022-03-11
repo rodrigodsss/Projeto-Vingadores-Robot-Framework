@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.7 on win32)" generated="20211017 10:23:03.973" rpa="false" schemaversion="2">
+<suite id="s1" name="Tables" source="C:\qaninja\robot\hello\web\tests\tables.robot">
+<test id="s1-t1" name="Verifica o valor ao informar o número da linha">
+<kw name="Nova sessão" library="base" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211017 10:23:04.473" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20211017 10:23:04.472" endtime="20211017 10:23:09.726"/>
+</kw>
+<status status="PASS" starttime="20211017 10:23:04.471" endtime="20211017 10:23:09.726"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}/tables</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211017 10:23:09.728" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.com//tables'</msg>
+<status status="PASS" starttime="20211017 10:23:09.728" endtime="20211017 10:23:10.248"/>
+</kw>
+<kw name="Table Row Should Contain" library="SeleniumLibrary">
+<arg>id:actors</arg>
+<arg>1</arg>
+<arg>@robertdowneyjr</arg>
+<doc>Verifies that table row contains text ``expected``.</doc>
+<status status="PASS" starttime="20211017 10:23:10.260" endtime="20211017 10:23:10.438"/>
+</kw>
+<kw name="Encerra sessão" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211017 10:23:10.601" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211017 10:23:10.439" endtime="20211017 10:23:10.601"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211017 10:23:10.601" endtime="20211017 10:23:13.215"/>
+</kw>
+<status status="PASS" starttime="20211017 10:23:10.439" endtime="20211017 10:23:13.216"/>
+</kw>
+<status status="PASS" starttime="20211017 10:23:04.470" endtime="20211017 10:23:13.217"/>
+</test>
+<test id="s1-t2" name="Descobre a linha pelo texto chave e valida os demais valores">
+<kw name="Nova sessão" library="base" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211017 10:23:13.222" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20211017 10:23:13.221" endtime="20211017 10:23:19.280"/>
+</kw>
+<status status="PASS" starttime="20211017 10:23:13.220" endtime="20211017 10:23:19.280"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}/tables</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211017 10:23:19.287" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.com//tables'</msg>
+<status status="PASS" starttime="20211017 10:23:19.286" endtime="20211017 10:23:20.390"/>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${target}</var>
+<arg>xpath:.//tr[contains(.,'chadwickboseman')]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20211017 10:23:20.429" level="INFO">${target} = &lt;selenium.webdriver.remote.webelement.WebElement (session="8958a0aec9e5ad4ee8e53d1d201c0ea8", element="d528115f-4ab2-4371-ad29-c079b60beb36")&gt;</msg>
+<status status="PASS" starttime="20211017 10:23:20.405" endtime="20211017 10:23:20.429"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${target.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20211017 10:23:20.457" level="INFO">Chadwick Boseman Pantera Negra Vingadores $ 700.000 @chadwickboseman edit delete</msg>
+<status status="PASS" starttime="20211017 10:23:20.430" endtime="20211017 10:23:20.457"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${target.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211017 10:23:20.458" endtime="20211017 10:23:20.474"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${target.text}</arg>
+<arg>$ 700.000</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20211017 10:23:20.474" endtime="20211017 10:23:20.491"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${target.text}</arg>
+<arg>Pantera Negra</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20211017 10:23:20.492" endtime="20211017 10:23:20.511"/>
+</kw>
+<kw name="Encerra sessão" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211017 10:23:20.683" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211017 10:23:20.512" endtime="20211017 10:23:20.683"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211017 10:23:20.683" endtime="20211017 10:23:23.208"/>
+</kw>
+<status status="PASS" starttime="20211017 10:23:20.511" endtime="20211017 10:23:23.209"/>
+</kw>
+<status status="PASS" starttime="20211017 10:23:13.219" endtime="20211017 10:23:23.209"/>
+</test>
+<status status="PASS" starttime="20211017 10:23:03.977" endtime="20211017 10:23:23.213"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Tables">Tables</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
